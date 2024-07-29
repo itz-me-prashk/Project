@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='home/style.css')}}" >
+    <link rel="icon" href="{{url_for('static',filename='IMG/OIP.png')}}" style="width:16px; height: 16px;">
+    <style type="text/css">
+        #form,#pop{
+            display: block;
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .final a{
+            color:white;
+        }
+        
+		
+    </style>
+</head>
+<body>
+    <div class="nav">
+            <h1>NOTES</h1>
+            <ul>
+                <li onclick="list()"> NEW</li>
+                <!-- <li class="unwanted">|</li>
+                
+                <li>CONTACT</li>
+                <li class="unwanted">|</li>
+                <li>ABOUT US</li> -->
+                
+            
+            </ul>
+        </div>
+        <!-- <div id="container">
+            <div class="text1">
+                
+                <h2 class='nones'>Heading</h2>
+                
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum.
+                
+                </p>
+                <button onclick="delall(event)" class="callit">Delete</button>
+            </div>
+        </div> -->
+        <div class='suck1'>
+            {% for data in datas %}
+            
+                <div class="text1">
+                    
+                    <h2 class='nones'>{{data.TITLE}}</h2>
+                    <!-- <h5>Author</h5> -->
+                    <p>
+                    {{data.CONTENT}}
+                    
+                    </p>
+                    <button onclick= " return confirm('are You Going To Delete?')"   class="callit"><a href='{{url_for("delnote",id=data.ID)}}'>Delete</a></button>
+                    <button  class="edith" type="button"><a href='{{url_for("edit",id=data.ID)}}' >Edit</a></button>
+                </div>
+            
+            {%endfor%}
+        </div>
+
+
+
+
+
+        <div>
+            <button class="plus" id="new" >+</button>
+            <p class="name-button-1">NEW</p>    
+        </div>
+    <div class="popup" id="pop"></div>
+        <div class="frm" id="form">
+        <h1><b>Edit</b></h1>
+        <form action='' method="post"> 
+            
+               
+                
+            <input type="text " placeholder="Book Title " class ="btitle" name='input_title1' value="{{datas1.TITLE}}" required> 
+            <!-- <input type="text " placeholder="Book Author " class="bname" name='input_author'  required> -->
+                
+                
+            
+                
+            <textarea placeholder="description"  id="desc" class="cont" name='input_des1'> {{datas1.CONTENT}} </textarea>
+                
+            
+                
+            <button  class="save" type="" >save</button>
+            
+			<a href='{{url_for("home")}}' class='cancela'>
+			<button id="cancel" class="cl" type="button" >cancel</button>
+			</a>
+            
+            
+                
+        
+            
+        </form > 
+        <!-- <div class="final">
+                <h3 class="x-mark"  type="button" ><a href='{{url_for("home")}}'>×</a> </h3>
+            </div>
+        </div> -->
+             
+        
+        
+        
+    <script src="{{url_for('static',filename='home/script.js')}}"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='none/sign.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='IMG/OIP.png')}}" style="width:16px; height: 16px;">
+    <style type="text/css">
+        .hr{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+        }
+        li{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Forgot PassWord</h2>
+        <form id="loginForm" action='' method='POST'>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="oldusername" required>
+            </div>
+            <div class="input-group">
+                <label for="password">OLD PASSWORD</label>
+                <input type="password" id="password" name="oldpassword" required>
+            </div>
+            <div class="input-group">
+                <label for="password">NEW PASSWORD</label>
+                <input type="password" id="password" name="newpassword" required>
+            </div>
+            <div class="input-group">
+                <label for="password">CONFIRM PASSWORD</label>
+                <input type="password" id="password" name="conpassword" required>
+            </div>
+
+            <button type="submit">Confirm</button>
+            <div class="hr">
+                <li>
+                <a href="{{url_for('signup')}}">New Here </a>
+                </li>
+
+                <li>
+                <a href="{{url_for('signin')}}">Sign In</a>
+                </li>
+            </div>
+<!--             <p id="errorMessage" class="error-message"></p>
+ -->        </form>
+    </div>
+    <!--<script src="{{url_for('static',filename='none/sign.js')}}"></script>-->
+</body>
+</html>

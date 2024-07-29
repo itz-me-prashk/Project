@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOADING....</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='load/load.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='IMG/OIP.png')}}" style="width:16px; height: 16px;">
+
+</head>
+<body>
+    <div class="image">
+        <img src="{{url_for('static',filename='IMG/OIP1.png')}}" class="img">
+    </div>
+    <h3 class='tit'>Please Wait - Contacting Server</h3>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <script src="{{url_for('static',filename='load/load.js')}}"></script>
+</body>
+</html>

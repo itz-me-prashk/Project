@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+h3{
+    transition: 0.5s;
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 25px 0 0 25px;
+    transition: width 1s ease-in-out;
+}
+.img{
+    width: 200px;
+    height:200px ;
+    
+}
+h3{
+    font-family: arial;
+}

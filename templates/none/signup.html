@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='none/sign.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <form id="signInForm">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" >
+                <input type="password" placeholder="Password" >
+                <label for='tags'>
+                    <button type="" id='fuck'>Sign In</button>
+                </label>
+                <input type="checkbox" id='tags'>
+
+
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form id="signUpForm">
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Name" >
+                <input type="email" placeholder="Email" >
+                <input type="password" placeholder="Password" >
+                <button type="submit" id='fuck'>Sign Up</button>
+                <input type="checkbox" class="tog">
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="{{url_for('static',filename='none/sign.js')}}"></script>
+</body>
+
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='none/sign.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='IMG/OIP.png')}}" style="width:16px; height: 16px;">
+    <style type="text/css">
+    .hr{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+        }
+        li{
+            display: inline-block;
+        }
+        </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- <div class="popups">
+            <ul>
+                <li></li>
+                <li>
+                    <x class='closex'> X </x>
+                </li>
+            </ul>
+        </div> -->
+        <h2>Sign Up</h2>
+        <form id="loginForm" method="POST" action=" ">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username1" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password1" required>
+            </div>
+            <button type="submit" >Sign Up</button>
+            <div class="hr">
+                <li>
+                <a href='{{url_for("signin")}}'>Sign In</a>
+                </li>
+            </div>
+<!--             <p id="errorMessage" class="error-message"></p>
+ -->        </form>
+    </div>
+    <!-- <script src="{{url_for('static',filename='none/sign.js')}}"></script> -->
+</body>
+</html>
